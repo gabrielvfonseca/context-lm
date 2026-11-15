@@ -8,7 +8,7 @@ SAME NUMBERS.
 THE DEFAULT. COLOUR-CODED, PLAIN TEXT, OPTIMISED FOR A TERMINAL.
 
 ```
-  shrink · /Users/dev/my-repo
+  context-lm · /Users/dev/my-repo
 
   Top 5 files = 61.4% of your context
   12 files = 50% · 31 files = 80%

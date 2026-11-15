@@ -169,7 +169,9 @@ function renderSkipped(input: TerminalInput): string[] {
 export function renderTerminal(input: TerminalInput): string {
   const lines: string[] = [];
   lines.push("");
-  lines.push(`  ${pc.bold("shrink")} ${pc.dim("·")} ${pc.cyan(input.root)}`);
+  lines.push(
+    `  ${pc.bold("context-lm")} ${pc.dim("·")} ${pc.cyan(input.root)}`
+  );
   lines.push("");
 
   // Headline

@@ -6,10 +6,10 @@ import pc from "picocolors";
 import { run } from "./run.js";
 
 const HELP = `
-${pc.bold("shrink")} — see which files eat your LLM context window
+${pc.bold("context-lm")} — see which files eat your LLM context window
 
 ${pc.bold("Usage")}
-  shrink [path] [options]
+  context-lm [path] [options]
 
 ${pc.bold("Options")}
   -p, --path <dir>     Directory to scan (default: current directory)
@@ -23,10 +23,10 @@ ${pc.bold("Options")}
   -v, --version        Show version
 
 ${pc.bold("Examples")}
-  shrink                 # scan current directory
-  shrink ./src           # scan a subdirectory
-  shrink --json          # JSON for scripting/CI
-  shrink --save-html report.html   # screenshot-ready treemap
+  context-lm                 # scan current directory
+  context-lm ./src           # scan a subdirectory
+  context-lm --json          # JSON for scripting/CI
+  context-lm --save-html report.html   # screenshot-ready treemap
 `;
 
 async function readVersion(): Promise<string> {

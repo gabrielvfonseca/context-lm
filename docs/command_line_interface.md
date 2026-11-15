@@ -1,7 +1,7 @@
 # COMMAND LINE INTERFACE
 
 ```
-shrink [path] [options]
+context-lm [path] [options]
 ```
 
 THE PATH ARGUMENT IS OPTIONAL AND DEFAULTS TO THE CURRENT DIRECTORY. ALL FLAGS
@@ -50,31 +50,31 @@ COUNT.
 SCAN A REPO AND SHOW ONLY THE TOP 3 FILES IN THE HEADLINE:
 
 ```sh
-shrink . --top 3
+context-lm . --top 3
 ```
 
 FIND EVERYTHING A TYPICAL AGENT WOULD PULL IN, IGNORING GIT RULES:
 
 ```sh
-shrink . --no-ignore
+context-lm . --no-ignore
 ```
 
 PRODUCE A JSON REPORT FOR A CI CHECK:
 
 ```sh
-shrink . --json | jq '.pareto.topNPercent'
+context-lm . --json | jq '.pareto.topNPercent'
 ```
 
 GENERATE A TREEMAP FOR A PULL REQUEST:
 
 ```sh
-shrink . --save-html shrink-report.html
+context-lm . --save-html context-lm-report.html
 ```
 
 SCAN ONLY LARGE FILES BY LOWERING THE SIZE CAP:
 
 ```sh
-shrink . --max-mb 1
+context-lm . --max-mb 1
 ```
 
 ## LIBRARY USE
@@ -82,7 +82,7 @@ shrink . --max-mb 1
 THE PACKAGE ALSO EXPORTS ITS INTERNALS FOR PROGRAMMATIC USE:
 
 ```ts
-import { run, scan, countTokens } from "shrink";
+import { run, scan, countTokens } from "context-lm";
 
 const result = await run({ root: ".", topN: 5, useIgnoreFiles: true, maxBytes: 5_242_880 });
 console.log(result.totalTokens);

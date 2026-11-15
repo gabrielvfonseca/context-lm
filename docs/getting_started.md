@@ -9,13 +9,13 @@ THEY COST, AND WHAT YOU CAN SAFELY IGNORE.
 RUN DIRECTLY WITH NPX — NO INSTALL NEEDED:
 
 ```sh
-npx shrink
+npx context-lm
 ```
 
 OR INSTALL GLOBALLY:
 
 ```sh
-npm install -g shrink
+npm install -g context-lm
 ```
 
 REQUIRES NODE.JS 20 OR NEWER.
@@ -25,20 +25,20 @@ REQUIRES NODE.JS 20 OR NEWER.
 SCAN THE CURRENT DIRECTORY:
 
 ```sh
-npx shrink
+npx context-lm
 ```
 
 SCAN A SUBDIRECTORY:
 
 ```sh
-npx shrink ./src
+npx context-lm ./src
 ```
 
 THE HEADLINE TELLS YOU THE PARETO SHAPE OF YOUR REPO — HOW MANY FILES HOLD
 MOST OF THE TOKENS:
 
 ```
-  shrink · /Users/dev/my-repo
+  context-lm · /Users/dev/my-repo
 
   Top 5 files = 61.4% of your context
   12 files = 50% · 31 files = 80%
@@ -56,7 +56,7 @@ THE HTML REPORT IS SELF-CONTAINED AND IDEAL FOR A README, ISSUE, OR SLACK
 POST:
 
 ```sh
-npx shrink --save-html report.html
+npx context-lm --save-html report.html
 ```
 
 OPEN IT IN A BROWSER. IT CONTAINS AN INTERACTIVE SQUARIFIED TREEMAP, TABLES

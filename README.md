@@ -1,15 +1,11 @@
-# Shrink
+![Shrink](banner.jpg)
 
-> See what actually eats your LLM context window.
+# See what actually eats your LLM context window.
 
-Point shrink at a repository and it tells you which files are responsible,
+Point context-lm at a repository and it tells you which files are responsible,
 how many tokens they cost, and what you can safely ignore. It produces a
 terminal report, a machine-readable JSON report, and a self-contained HTML
 report with a squarified treemap of token cost per file and directory.
-
-[![CI](https://github.com/gabrielvfonseca/shrink/actions/workflows/ci.yml/badge.svg)](https://github.com/gabrielvfonseca/shrink/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/shrink.svg)](https://www.npmjs.com/package/shrink)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Why
 
@@ -26,13 +22,13 @@ your model will actually see.
 Run directly with npx — no install needed:
 
 ```sh
-npx shrink
+npx context-lm
 ```
 
 Or install globally:
 
 ```sh
-npm install -g shrink
+npm install -g context-lm
 ```
 
 Requires Node.js 20 or newer.
@@ -42,20 +38,20 @@ Requires Node.js 20 or newer.
 Scan the current directory:
 
 ```sh
-npx shrink
+npx context-lm
 ```
 
 Scan a subdirectory:
 
 ```sh
-npx shrink ./src
+npx context-lm ./src
 ```
 
 The headline tells you the Pareto shape of your repo — how many files hold
 most of the tokens:
 
 ```
-  shrink · /Users/dev/my-repo
+  context-lm · /Users/dev/my-repo
 
   Top 5 files = 61.4% of your context
   12 files = 50% · 31 files = 80%
@@ -81,7 +77,7 @@ analytics, no font downloads. Works offline and from a `file://` URL. Ideal for
 a README, issue, or Slack post.
 
 ```sh
-npx shrink --save-html report.html
+npx context-lm --save-html report.html
 ```
 
 Includes an interactive squarified treemap (one cell per file, area proportional
@@ -95,7 +91,7 @@ patterns.
 Machine-readable and stable for scripts and CI:
 
 ```sh
-npx shrink --json
+npx context-lm --json
 ```
 
 ```json
@@ -178,7 +174,7 @@ To apply a suggestion, add the pattern to `.tokenignore` and rescan.
 
 ## Privacy
 
-shrink runs entirely on your machine.
+context-lm runs entirely on your machine.
 
 - No network calls, no telemetry, no data collection
 - File contents, paths, and token counts never leave your machine
@@ -193,7 +189,7 @@ that does not involve pasting code into a web tool.
 The package exports its internals for programmatic use:
 
 ```ts
-import { run, scan, countTokens } from "shrink";
+import { run, scan, countTokens } from "context-lm";
 
 const result = await run({
   root: ".",

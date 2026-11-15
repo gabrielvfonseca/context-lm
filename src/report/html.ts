@@ -204,7 +204,7 @@ export function renderHtml(input: HtmlInput): string {
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>shrink — ${escapeHtml(input.root)}</title>
+<title>context-lm — ${escapeHtml(input.root)}</title>
 <style>
   :root {
     --bg: #0d1117; --panel: #161b22; --border: #30363d;
@@ -262,7 +262,7 @@ export function renderHtml(input: HtmlInput): string {
 </head>
 <body>
 <div class="wrap">
-  <h1>shrink <span class="root">— ${escapeHtml(input.root)}</span></h1>
+  <h1>context-lm <span class="root">— ${escapeHtml(input.root)}</span></h1>
 
   <div class="headline">
     <div class="big">Top <em>${pareto.topN} files</em> = <em>${fmtPct(
